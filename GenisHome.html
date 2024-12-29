@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://registry.npmmirror.com/vue/3.3.11/files/dist/vue.global.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+        body {
+            background-color: #000;
+            background-image: url('https://placehold.co/800x800/000000/000000');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Signika Negative', sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        img {
+            pointer-events: none;
+            -webkit-user-select: none; 
+            user-select: none;
+            animation: spin 5s linear infinite; /* Added rotation animation */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .flex {
+            display: flex;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-center {
+            justify-content: center;
+        }
+        .min-h-screen {
+            min-height: 100vh;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-white {
+            color: white;
+        }
+        .text-green-500 {
+            color: #10B981;
+        }
+        .text-gray-400 {
+            color: #D1D5DB;
+        }
+        .bg-green-700 {
+            background-color: #047857;
+        }
+        .bg-green-800:hover {
+            background-color: #065f46;
+        }
+        .font-bold {
+            font-weight: bold;
+        }
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .rounded-md {
+            border-radius: 0.375rem;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .mt-4 {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen" id="app">
+        <div class="text-center text-white">
+            <img alt="BullX logo" class="mx-auto mb-4" height="100" src="https://i.ibb.co/6bN03pp/IMG-20241211-211549-488.jpg" width="100"/>
+            <h1 class="text-4xl font-bold mb-2"><span class="text-green-500">x</span><span class="text-white">Genis</span></h1>
+            <p class="text-green-500 mb-1">
+                EARLY ACCESS
+            </p>
+            <p class="text-gray-400 mb-1">
+                Connect your telegram to start mining instantly.
+            </p>
+            <button class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-md flex items-center justify-center mx-auto mt-4">
+                <i class="fab fa-telegram-plane mr-2"></i>
+                Connect Telegram
+            </button>
+        </div>
+    </div>
+    <script>
+        const { createApp } = Vue;
+        createApp({}).mount('#app');
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
