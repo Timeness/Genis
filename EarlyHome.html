@@ -18,12 +18,11 @@
             height: 100vh;
             overflow: hidden;
         }
-
         img {
             pointer-events: none;
             -webkit-user-select: none; 
             user-select: none;
-            animation: spin 5s linear infinite;
+            animation: spin 5s linear infinite; /* Added rotation animation */
         }
 
         @keyframes spin {
@@ -86,29 +85,12 @@
         .mt-4 {
             margin-top: 1rem;
         }
-
-        .content-container {
-            margin-top: -50px; /* Adjust this value to move content upward */
-        }
-
-        .loading-circle {
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-top: 5px solid white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     </style>
 </head>
 <body>
     <div class="flex items-center justify-center min-h-screen" id="app">
-        <div class="text-center text-white content-container">
-            <img alt="BullX logo" class="mx-auto mb-4" height="100" src="https://i.ibb.co/6bN03pp/IMG-20241211-211549-488.jpg" width="100"/>
+        <div class="text-center text-white">
+            <img alt="BullX logo" class="mx-auto mb-4" height="100" src="https://i.ibb.co/R6F9z6Q/20241231-201943-0000.png" width="100"/>
             <h1 class="text-4xl font-bold mb-2"><span class="text-green-500">x</span><span class="text-white">Genis</span></h1>
             <p class="text-green-500 mb-1">
                 EARLY ACCESS USER
@@ -122,9 +104,6 @@
             </button>
         </div>
     </div>
-
-    <div class="loading-circle"></div>
-
     <script>
         const { createApp } = Vue;
         createApp({}).mount('#app');
